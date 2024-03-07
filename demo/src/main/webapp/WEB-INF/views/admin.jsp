@@ -63,11 +63,18 @@
 	<script>
 		document.getElementById('id').addEventListener("keyup",function(){
 			var idcheck = /^[A-Za-z0-9]+$/;
-			
 			if(!idcheck.test(this.value)){
 				alert ('아이디는 숫자와 영어만 가능합니다');
-				this.value=this.value.replace(/[^A-Za-z0-9]/g, '');
-				
+				this.value=this.value.replace(/[^A-Za-z0-9]/g, '');	
+			}
+		});
+		
+		
+		document.getElementById('regi_btn').addEventListener("click",function(){
+			var pass = document.getElementById('pass').value;
+			var pass2 = document.getElementById('pass2').value;
+			if(pass !== pass2){
+				alert('비밀번호가 일치하지않습니다');
 			}
 		});
 	</script>
